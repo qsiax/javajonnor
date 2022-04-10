@@ -1,0 +1,20 @@
+.menu-overlay {
+	position: fixed;
+	width: 100%;
+	height: 33.33vh;
+	top: 0;
+	z-index: 100;
+	background: $black;
+}
+.firts-menu {
+	top: 0;
+	right: -100%;
+}
+.second-menu {
+	top: 33.3%;
+	right: -100%;
+}
+.third-menu {
+	top: 66.6%;
+	right: -100%;
+}

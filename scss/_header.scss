@@ -1,0 +1,149 @@
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	&__container {
+		position: relative;
+	}
+
+	&__body {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	&__block {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__block-item {
+		width: 68.2%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		position: fixed;
+		z-index: 99;
+		a {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			.hide-java {
+				width: 100px;
+				height: 30px;
+				overflow: hidden;
+				margin-bottom: 3px;
+				img {
+					transform: translateY(150%);
+				}
+			}
+			.hide-jonnor {
+				width: 150px;
+				height: 30px;
+				overflow: hidden;
+				img {
+					transform: translateY(150%);
+				}
+			}
+
+		}
+	}
+
+	&__navigator {
+		padding-top: 60px;
+		width: 70px;
+		height: 120px;
+		overflow: hidden;
+		li {
+			list-style: none;
+			margin-bottom: 4px;
+			max-height: 14px;
+			transform: translateX(-100%);
+			&:last-child {
+				margin: 0;
+			}
+		}
+		li a {
+			text-decoration: none;
+			color: $black;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 15px;
+			position: relative;
+			&:hover:before {
+				width: 100%;
+				right: auto;
+				left: 0;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 0%;
+				height: 1px;
+				background: $black;
+				transition: .5s ease;
+			}
+		}
+	}
+
+	&__menu-wrapper {
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		background: $orange;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: .2s ease;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			border: 2px solid $white;
+			opacity: 1;
+			transition: .3s ease;
+		}
+		&.focus:before {
+			opacity: 0;
+		}
+	}
+
+	&__menu {
+		position: relative;
+		width: 22.7px;
+		height: 9px;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 2px;
+			background: $white;
+			transition: .5s ease;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 2px;
+			background: $white;
+			transition: .5s ease;
+		}
+	}
+}
