@@ -91,6 +91,7 @@
 		li {
 			list-style: none;
 			margin-bottom: 40px;
+			max-width: 360px;
 			&:last-child {
 				margin: 0;
 			}
@@ -104,21 +105,8 @@
 				position: relative;
 				&:hover {
 					color: $orange;
-				}
-				&:hover:before {
-					width: 100%;
-					right: auto;
-					left: 0;
-				}
-				&:before {
-					content: '';
-					position: absolute;
-					right: 0;
-					bottom: 5px;
-					width: 0%;
-					height: 2px;
-					background: $orange;
-					transition: .5s ease;
+					font-family: 'Playfair Display';
+					font-style: italic;
 				}
 			}
 		}
@@ -128,10 +116,47 @@
 	}
 
 	&__whatsapp {
+		position: relative;
+		overflow: hidden;
+		width: 118px;
+		height: 35px;
+		span {
+			position: absolute;
+			transition: .7s ease;
+		}
+		span:nth-child(2) {
+			transform: translateY(100%);
+			opacity: .8;
+		}
+		&:hover span:nth-child(1) {
+			transform: translateY(-100%);
+		} 
+		&:hover span:nth-child(2) {
+			transform: translateY(0%);
+		} 
 	}
 
 	&__telegram {
+		position: relative;
 		margin-bottom: 30px;
+		width: 105px;
+		height: 35px;
+		overflow: hidden;
+		cursor: pointer;
+		span {
+			position: absolute;
+			transition: .7s ease;
+		}
+		span:nth-child(2) {
+			transform: translateY(100%);
+			opacity: .8;
+		}
+		&:hover span:nth-child(1) {
+			transform: translateY(-100%);
+		} 
+		&:hover span:nth-child(2) {
+			transform: translateY(0%);
+		} 
 	}
 
 	&__mail-text {

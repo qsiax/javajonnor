@@ -141,14 +141,21 @@ TweenMax.to('.main__line', 1.5, {
 	ease: Expo.easeInOut
 })
 
-TweenMax.to('.main__heading .hidetext p', 1.5, {
+TweenMax.to('.main__heading', 1.5, {
 	delay: 4.5,
+	y: "0%",
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.main__text .hidetext p', 1.5, {
+	delay: 5.5,
 	y: "0%",
 	ease: Expo.easeInOut
 })
 
 TweenMax.to('.main__arrow', 1.5, {
 	delay: 4.5,
+	scale: 1,
 	ease: Expo.easeInOut
 })
 
@@ -181,9 +188,36 @@ document.querySelector('.menuBurger__close').addEventListener('click', () => {
 TweenMax.to('.work__line', 1.5, {
 	scrollTrigger: {
 		trigger: ".work__heading",
-		start: "top center",
+		start: "top bottom",
 	},
 	width: "100%",
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.work__heading .hidetext .work__heading-wrapper', 1.5, {
+	scrollTrigger: {
+		trigger: ".work__line",
+		start: "top center",
+	},
+	y: '0',
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.work__text .hidetext p', 1.5, {
+	scrollTrigger: {
+		trigger: ".work__descriptions",
+		start: "top bottom",
+	},
+	y: '0',
+	ease: Expo.easeInOut
+})
+
+TweenMax.to('.work__descriptions .hidetext p', 1.5, {
+	scrollTrigger: {
+		trigger: ".work__descriptions",
+		start: "top bottom",
+	},
+	y: '0',
 	ease: Expo.easeInOut
 })
 

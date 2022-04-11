@@ -2,13 +2,14 @@
 	position: relative;
 	&__container {
 		position: relative;
-		min-height: 100%;
 	}
 
 	&__body {
 		position: relative;
 		display: flex;
+		flex-direction: column;
 		justify-content: flex-end;
+		align-items: flex-end;
 	}
 
 	&__block {
@@ -22,6 +23,10 @@
 	&__line {
 		height: 253px;
 		width: 0%;
+	}
+
+	&__heading-wrapper {
+		transform: translateY(-100%);
 	}
 
 	&__heading {
@@ -39,6 +44,11 @@
 			line-height: 110.5%;
 			margin-right: 20px;
 		}
+		.hidetext {
+			width: 530px;
+			height: 70px;
+			overflow: hidden;
+		}
 	}
 
 	&__item-wrapper {
@@ -51,6 +61,14 @@
 		font-size: 24px;
 		line-height: 33px;
 		padding-right: 53px;
+		.hidetext {
+			width: 380px;
+			height: 135px;
+			overflow: hidden;
+			p {
+				transform: translateY(100%);
+			}
+		}
 	}
 
 	&__arrow {
@@ -66,5 +84,13 @@
 		font-size: 14px;
 		line-height: 19px;
 		margin-top: 241px;
+		.hidetext {
+			width: 175px;
+			height: 135px;
+			overflow: hidden;
+			p {
+				transform: translateY(-100%);
+			}
+		}
 	}
 }

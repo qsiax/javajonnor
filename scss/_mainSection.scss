@@ -24,6 +24,14 @@
 		width: 0;
 	}
 
+	&__heading-wrapper {
+		.hidetext {
+			height: 320px;
+			width: 100%;
+			overflow: hidden;
+		}
+	}
+
 	&__heading {
 		font-weight: 400;
 		font-size: 64px;
@@ -31,16 +39,9 @@
 		text-transform: uppercase;
 		margin-bottom: 47px;
 		margin-top: 10px;
+		transform: translateY(-120%);
 		span:nth-child(2) {
 			margin-left: 95px;
-		}
-		.hidetext {
-			height: 320px;
-			width: 100%;
-			overflow: hidden;
-			p {
-				transform: translateY(-100%);
-			}
 		}
 	}
 
@@ -66,11 +67,29 @@
 		font-size: 14px;
 		line-height: 19px;
 		margin-left: 405px;
+		.hidetext {
+			width: 240px;
+			height: 60px;
+			overflow: hidden;
+			p {
+				transform: translateY(100%);
+			}
+		}
 	}
 
 	&__arrow {
 		position: absolute;
 		background: $black;
-		bottom: 0px;
+		bottom: 5px;
+		cursor: pointer;
+		&:hover:before {
+			opacity: 0;
+		}
+		& img {
+			transition: .2s ease;
+		}
+		&:hover img {
+			transform: rotate(45deg);
+		}
 	}
 }
